@@ -1,0 +1,36 @@
+.home_container{
+    width:95%;
+    height:85vh;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home_container .dash_detail{
+    height: 50vh;
+    width: 100%;
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+
+}
+.dash_detail .values{
+    height: 50vh;
+    width: 30%;
+    background-color: var(--bgcolor);
+    border-radius: 20px;
+}
+
+.dash_detail .chart_container{
+    height: 50vh;
+    width: 65%;
+    background-color:#c4dbfa;
+    border-radius: 20px;
+}
+.home_container .minors{
+height: 30vh;
+width: 100%;
+background-color:#ffbea0;
+border-radius: 20px;
+}

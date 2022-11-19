@@ -1,0 +1,25 @@
+.user{
+margin-top: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 50px;
+}
+.user img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.user span{
+    text-align: center;
+    margin-top: 10px;
+}
+.user span:nth-child(2){
+    font-weight: bold;
+     font-size: 16px;
+     color: var(--bgcolor);
+}
+.user span:nth-child(3){
+    font-weight: bold;
+    color:gray;
+}

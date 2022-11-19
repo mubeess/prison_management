@@ -1,23 +1,19 @@
 import React from 'react'
-import { Route, Routes } from 'react-router'
+import Layout from './screens/Layout'
 import Login from './screens/Login'
-
+import Home from './screens/Home'
+import Prisoners from './screens/Prisoners'
+import {Route, Routes} from 'react-router-dom'
 
 export default function App() {
   return (
     <Routes>
-        <Route element={<Login/>} path='/'/>
+     <Route element={<Login/>} path='/'/>
+     <Route path='dashboard' element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path='prisoners' element={<Prisoners/>}/>
+     </Route>
     </Routes>
   )
 }
 
-
-// {/* <Route path="/" element={<Layout />}>
-//           <Route index element={<Home />} />
-//           <Route path="about" element={<About />} />
-//           <Route path="dashboard" element={<Dashboard />} />
-
-//           {/* Using path="*"" means "match anything", so this route
-//                 acts like a catch-all for URLs that we don't have explicit
-//                 routes for. */}
-//           <Route path="*" element={<NoMatch />} /> */}

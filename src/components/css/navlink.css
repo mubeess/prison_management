@@ -1,0 +1,28 @@
+.nav_container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav_container:hover{
+    background-color:var(--gray);
+}
+.nav_container .icon{
+    width: 25%;
+}
+.nav_container.active{
+background-color: var(--gray);
+}
+.nav_container span{
+    text-align: left;
+    width:50%;
+}
