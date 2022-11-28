@@ -4,6 +4,8 @@ import { Line } from "react-chartjs-2";
 
 import { Circle } from 'rc-progress';
 import './css/home.css'
+import MenuIcon from '../components/MenuIcon';
+import { ArrowRightOutlined, FileAddFilled, FileOutlined, PlusOutlined } from '@ant-design/icons';
 
 
 const data = {
@@ -58,8 +60,13 @@ export default function Home() {
 
     </div>
 
-    <div className='minors'></div>
-
+    <div className='minors'>
+      <MenuIcon title='Add Staff' Icon={()=><PlusOutlined/>}/>
+      <MenuIcon title='Add Prisoner' Icon={()=><FileAddFilled/>}/>
+      <MenuIcon title='Generate Report' Icon={()=><FileOutlined/>}/>
+      <MenuIcon title='Dispatch Prisoner' Icon={()=><ArrowRightOutlined/>}/>
+    </div>
+       
     </div>
   )
 }
