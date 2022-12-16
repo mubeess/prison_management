@@ -16,13 +16,16 @@ export default function Layout() {
         <User/>
         <NavLInk 
         title='Home'
+        route='/dashboard'
         active={true}
         />
         <NavLInk 
+        route='/dashboard/prisoners'
         title='Prisoners'
         Icon={()=><IdcardOutlined />}
         />
         <NavLInk
+        route='/dashboard/staff'
         title='Staff' 
         Icon={()=><UserOutlined/>}
         />

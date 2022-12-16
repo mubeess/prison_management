@@ -4,6 +4,7 @@ import Login from './screens/Login'
 import Home from './screens/Home'
 import Prisoners from './screens/Prisoners'
 import {Route, Routes} from 'react-router-dom'
+import Staff from './screens/Staff'
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
      <Route path='dashboard' element={<Layout/>}>
           <Route index element={<Home/>}/>
           <Route path='prisoners' element={<Prisoners/>}/>
+          <Route path='staff' element={<Staff/>}/>
      </Route>
     </Routes>
   )

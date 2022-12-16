@@ -1,9 +1,9 @@
 import { FileAddFilled } from '@ant-design/icons'
 import React from 'react'
 import './css/menu.css'
-function MenuIcon({Icon,title=''}) {
+function MenuIcon({Icon,title='',onClick}) {
   return (
-    <div className='menu-cont'>
+    <div onClick={onClick} className='menu-cont'>
         <div className='icon-cont'>
             <Icon/>
         </div>

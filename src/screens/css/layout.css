@@ -5,6 +5,7 @@
     overflow: hidden;
     display: flex;
    justify-content: center;
+   overflow: hidden;
 }
 .aside{
     min-height:95vh;
@@ -33,6 +34,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .layout_logo{
     height: 50px;

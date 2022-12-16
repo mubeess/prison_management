@@ -1,0 +1,13 @@
+.prisoners_container{
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    height:85vh;
+    overflow-y: scroll;
+    
+}
+.prisoners_container .prisoner_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

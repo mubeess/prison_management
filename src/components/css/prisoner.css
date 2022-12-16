@@ -1,0 +1,36 @@
+.prisoner_container{
+    width: 30%;
+    height: 200px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+.prisoner_container img{
+    width: 180px;
+    height:180px;
+    border-radius: 50%;
+}
+.prisoner_container .prisoner_detail{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.prisoner_detail svg{
+    font-size: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.prisoner_detail svg:hover{
+    transform: scale(0.7);
+}
+.prisoner_detail .priosner_icons{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+   
+}
