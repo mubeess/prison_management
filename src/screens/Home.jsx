@@ -45,7 +45,7 @@ const { TextArea } = Input;
         <Stat
         title1='Active Prisoners'
         value1='700'
-        title2='Dispatched Prisoners'
+        title2='Discharge Prisoners'
         value2='200' 
         />
         <div className='progress'>
