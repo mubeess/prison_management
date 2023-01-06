@@ -1,7 +1,7 @@
 import { ArrowRightOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons'
 import React from 'react'
 import './css/prisoner.css'
-export default function Prisoner({name='',convic='',id}) {
+export default function Prisoner({name='',convic='',id,staff=false}) {
   return (
     <div className='prisoner_container'>
         <img 
@@ -12,7 +12,7 @@ export default function Prisoner({name='',convic='',id}) {
             <span>{convic}</span>
             <div className='priosner_icons'>
                 <DeleteOutlined onClick={()=>{
-                   fetch(`https://pms.fly.dev/admin/delete-single-inmate?inmateId=${id}`,{
+                   fetch(`https://pms.fly.dev/admin/${staff?`delete-single-staff?${id}`:`delete-single-inmate?inmateId=${id}`}`,{
                     method:'DELETE',
                     headers:{
                       "Content-Type":'application/json'
@@ -24,7 +24,6 @@ export default function Prisoner({name='',convic='',id}) {
     res.json()
     .then(data=>{
       alert('deleted succesful')
-      console.log(data)
       location.reload()
     })
     .catch(_err=>{

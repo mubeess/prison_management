@@ -6,7 +6,7 @@ export default function Prisoners() {
   const [allInmate,setAllIn]=useState(null)
   const [filtered,setFiltered]=useState([])
   const [filterText,setFilterTx]=useState('')
-
+  const fillTererddd = allInmate!==null && allInmate.filter(inm=>inm.firstName.toLowerCase().includes(filterText.toLowerCase()))
   useEffect(()=>{
    fetch('https://pms.fly.dev/admin/get-all-inmate')
    .then(res=>{
@@ -17,6 +17,7 @@ export default function Prisoners() {
     })
    })
   },[])
+
   return (
     <div className='prisoners_container'>
      <div>
@@ -25,9 +26,10 @@ export default function Prisoners() {
        if (allInmate==null) {
         return
        } 
+       setFilterTx(e.target.value)
        
-      const fillTererddd = allInmate.filter(inm=>inm.firstName.toLowerCase().includes(e.target.value.toLowerCase()))
-      setFiltered(fillTererddd)
+      // const fillTererddd = allInmate.filter(inm=>inm.firstName.toLowerCase().includes(filterText.toLowerCase()))
+      // setFiltered(fillTererddd)
       
       }} placeholder='Search Prisoners By Name' size='large'/>
      </div>
@@ -35,7 +37,7 @@ export default function Prisoners() {
      <div className='prisoner_list'>
       {
         allInmate!==null&&(
-          filtered.map((inm,ind)=>(
+          fillTererddd.map((inm,ind)=>(
             <Prisoner id={inm.inmateId} name={`${inm.firstName} ${inm.lastName}`} convic={inm.phone} key={ind}/>
           ))
         )
